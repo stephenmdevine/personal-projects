@@ -3,9 +3,8 @@ function menu(obj) {
     // return menuArr;
     let menuList = "";
     for (let i = 0; i < menuArr.length; i++) {
-        menuList += `${i+1}. ${menuArr[i]}\n`;
+        menuList += `\n${i+1}. ${menuArr[i]}`;
     }
-    menuList = menuList.slice(0, -1);
     return menuList;
 }
 
