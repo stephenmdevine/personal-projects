@@ -22,3 +22,5 @@ function selection() {
     }
     return diceRolls;
 }
+
+module.exports = selection;

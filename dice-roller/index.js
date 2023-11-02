@@ -1,6 +1,19 @@
 const diceSet = require('./dice-set.js');
 const menu = require('./menu.js');
 const input = require('readline-sync');
+const selection = require('./dice-selection.js');
 
-// console.log(diceSet.d20.dieRoll());
-// console.log(menu(diceSet));
+function runProgram () {
+    let playOn = true;
+    let ans = "";
+    const falsiness = ['n', 'no', '0' , 'false'];
+    while (playOn) {
+        menu();
+        ans = input.question("Would you like to roll more dice? ");
+        if (falsiness.includes(ans.toLowerCase())) {
+            playOn = false;
+        }
+    }
+}
+
+runProgram();
