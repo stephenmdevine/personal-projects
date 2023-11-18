@@ -1,6 +1,7 @@
 const input = require('readline-sync');
 const selection = require('./dice-selection');
 const summedDice = require('./summed-dice');
+const separateDice = require('./separate-dice');
 
 
 // function menu(obj) {
@@ -19,6 +20,9 @@ function menu() {
     if (ask === "1") {
         console.log("Summing the dice...");
         console.log(summedDice(rolledDice));
+    }   else {
+        console.log("Rolling the dice...");
+        console.log(separateDice(rolledDice));
     }
 }
 
