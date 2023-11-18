@@ -5,7 +5,7 @@ function separateDice(diceArr) {
         let tempVar = `d${diceArr[i].dieSize}+${diceArr[i].modifier} = ${quickRoll}`;
         listOfDice.push(tempVar);
     }
-    listOfDice.unshift(0);
+    listOfDice.unshift(`${listOfDice.length} dice`);
     return listOfDice;
 }
 
